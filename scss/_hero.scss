@@ -1,0 +1,36 @@
+.main{
+    // position: sticky;
+    // top: 0;
+    padding: 10px;
+    // background-color: rgba(0, 0, 0, 0.527);
+    // height: 800px;
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color:white;
+        h1{
+            // position: sticky;
+            margin-top: 200px;
+            width: 700px;
+            border: 10px solid #f1c40f;
+            border-radius: 100px;
+            // position: sticky;
+            font-family: 'Big Shoulders Stencil';
+            font-weight: 900;
+            font-size: 90px;
+            box-shadow: inset 0 0 20px #f1c40f;
+            text-shadow: 0 0 2px #f1c40f;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.678);
+            color: #f1c40f;
+        }
+        .pic1{
+            img{
+                width: 500px;
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,72 @@
+.AloqaMenuBar {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 350px;
+    background: #2e2c25e5;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 100px black;
+    border: 2px solid #f1c40f;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    backdrop-filter: blur(10px);
+    transform: translateY(-10px);
+
+    h3, h4 {
+        margin-bottom: 10px;
+        color: #f1c40f;
+        font-family: 'Raleway';
+    }
+    p{
+        color: #fff;
+        font-weight: 100;
+        font-family: 'Krub';
+        b{
+            color: #f1c40f;
+            font-family: 'Raleway';
+        }
+    }
+
+    a {
+        display: block;
+        margin-top: 5px;
+        color: #ffffff;
+        font-family: 'Fredoka';
+        font-weight: 100;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 8px;
+            cursor: pointer;
+            border-radius: 4px;
+
+            &:hover {
+                background: #0056b3;
+            }
+        }
+    }
+}
+
