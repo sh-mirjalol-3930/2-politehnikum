@@ -250,23 +250,30 @@ footer .row {
 }
 footer .row b {
   margin: 0 auto;
-  width: 700px;
+  width: 420px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  color: #f1c40f;
+  color: rgba(255, 255, 255, 0.692);
+  font-family: "Krub";
+  font-weight: 100;
 }
 footer .row b p {
   color: white;
+  font-weight: 100;
   font-family: "Krub";
   font-size: 17px;
   font-weight: 100;
 }
 footer .row b p a {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Krub";
   color: #d8d8d8;
   text-decoration: none;
   font-size: 16px;
   font-weight: 100;
+  padding-left: 10px;
+  border-left: 1px solid rgba(255, 255, 255, 0.397);
+  padding-left: 20px;
 }
 
 .AloqaMenuBar {
