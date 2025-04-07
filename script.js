@@ -108,3 +108,67 @@ document.querySelector(".search-box input").addEventListener("input", (e) => {
       card.style.display = title.includes(searchValue) ? "flex" : "none";
   });
 });
+
+
+
+
+
+
+
+
+
+
+// Qidiruv funksiyasi
+const searchInput = document.querySelector(".search-box input");
+
+searchInput.addEventListener("input", function(e) {
+    const searchText = e.target.value.toLowerCase();
+    const allElements = document.querySelectorAll('p, b, h1, h2, h3, h4, h5, h6'); // Barcha matnli elementlar
+
+    allElements.forEach(element => {
+        const content = element.textContent.toLowerCase();
+        const parentCard = element.closest('.card, section, div p, b'); // Element joylashgan card yoki section
+
+        if (parentCard) {
+            if (content.includes(searchText)) {
+                parentCard.style.display = "block";
+                // Topilgan so'zni highlight qilish
+                element.innerHTML = element.textContent.replace(
+                    new RegExp(searchText, "gi"),
+                    match => `<span style="background-color: #f1c40f; color: black">${match}</span>`
+                );
+            } else {
+                if (!hasVisibleSibling(parentCard)) {
+                    parentCard.style.display = "none";
+                }
+            }
+        }
+    });
+});
+
+// Yordamchi funksiya - ko'rinadigan qo'shni elementlarni tekshirish
+function hasVisibleSibling(element) {
+    const siblings = element.parentElement.children;
+    for (let sibling of siblings) {
+        if (sibling !== element && sibling.style.display !== "none") {
+            return true;
+        }
+    }
+    return false;
+}
+
+// Qidiruv maydonini tozalash uchun
+searchInput.addEventListener("blur", function() {
+    if (this.value === "") {
+        const allElements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6');
+        allElements.forEach(element => {
+            const parentCard = element.closest('.card, section, div');
+            if (parentCard) {
+                parentCard.style.display = "block";
+            }
+            // Highlight ni olib tashlash
+            element.innerHTML = element.textContent;
+        });
+    }
+});
+

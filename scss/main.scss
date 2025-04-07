@@ -7,6 +7,8 @@
 @import './yangiliklar.scss';
 @import './yonalishlar.scss';
 @import './ustozlar.scss';
+@import './tadbirlar.scss';
+@import './amaliyotlar.scss';
 ::selection{
     background: #f1c40f86;
     color: white;
@@ -132,7 +134,25 @@ body{
     }
 }
 
+.search-box {
+    // ...existing code...
+    
+    input:focus {
+        outline: none;
+        color: white;
+        &::placeholder {
+            opacity: 0.7;
+        }
+    }
+}
 
+// Highlight uchun stil
+.highlight {
+    background-color: #f1c40f;
+    color: black;
+    padding: 0 2px;
+    border-radius: 3px;
+}
 
 
 

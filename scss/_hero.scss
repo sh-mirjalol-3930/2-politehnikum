@@ -25,6 +25,8 @@
             text-align: center;
             background-color: rgba(0, 0, 0, 0.678);
             color: #f1c40f;
+            animation: fadeScale 1.5s ease forwards;
+            z-index: -1000;
         }
         .pic1{
             img{
@@ -32,5 +34,17 @@
             }
         }
         
+    }
+}
+
+
+@keyframes fadeScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
 }
